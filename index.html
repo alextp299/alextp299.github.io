@@ -2,87 +2,133 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Álex Toledano - Portfolio</title>
   <style>
-    /* Reset y estilos base */
+    /* Reset y base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       background-color: #0f0f0f;
-      color: #ffffff;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
       text-align: center;
+      padding: 2rem 1rem;
     }
-
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       animation: fadeIn 1s ease-in-out;
     }
-
-    p {
-      font-size: 1.2rem;
+    p.lead {
+      font-size: 1.25rem;
       color: #ccc;
-      max-width: 500px;
+      max-width: 600px;
       margin-bottom: 2rem;
       animation: fadeIn 1.5s ease-in-out;
     }
-
-    a {
+    a.contact {
       color: #00ffff;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      display: inline-block;
       transition: color 0.3s;
     }
-
-    a:hover {
+    a.contact:hover {
       color: #ff00cc;
     }
-
     .cursor {
       color: #00ffff;
       animation: blink 1s steps(2, start) infinite;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes blink {
       to { visibility: hidden; }
     }
-
+    /* Proyectos */
+    #proyectos {
+      max-width: 800px;
+      width: 90%;
+      margin-top: 2rem;
+    }
+    #proyectos h2 {
+      color: #00ffff;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    #proyectos .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    #proyectos a {
+      background: #222;
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      width: 250px;
+      box-shadow: 0 0 10px #00ffffaa;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    #proyectos a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00cc;
+    }
+    #proyectos h3 {
+      margin-bottom: 0.5rem;
+    }
+    #proyectos p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: auto;
       font-size: 0.9rem;
       color: #444;
+      padding: 1rem 0;
     }
   </style>
 </head>
 <body>
-  <h1 id="typing">Hola, soy Álex<span class="cursor">|</span></h1>
-  <p>
-    Analista de datos, desarrollador web y técnico IT. Me gusta crear soluciones simples, visuales y funcionales.  
+  <h1 id="typing"></h1>
+  <p class="lead">
+    Analista de datos, desarrollador web y técnico IT que transforma ideas en proyectos reales y útiles.
   </p>
-  <a href="mailto:alextp299@gmail.com">📩 Contactar</a>
+  <a href="mailto:alextp299@gmail.com" class="contact">📩 Contáctame</a>
+
+  <section id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <div class="grid">
+      <a href="https://bonhomme.lol/" target="_blank" rel="noopener">
+        <h3>Bonhomme</h3>
+        <p>Portfolio minimalista con animaciones creativas.</p>
+      </a>
+      <a href="https://p5aholic.me/contact/" target="_blank" rel="noopener">
+        <h3>p5aholic</h3>
+        <p>Web personal con diseño limpio y contacto directo.</p>
+      </a>
+    </div>
+  </section>
 
   <footer>© 2025 Álex Toledano</footer>
 
   <script>
-    const texto = "Hola, soy Álex";
+    const texto = "Descubre lo que Álex puede hacer por ti";
     let i = 0;
     const typingElement = document.getElementById("typing");
 
