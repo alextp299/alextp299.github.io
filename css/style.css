@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+html, body {
+  height: 100%;
+}
+main {
+  flex: 1;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+header {
+  background: #1e1e1e;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #dcdcdc;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #00ffaa;
+}
+section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+h2 {
+  color: #00ffaa;
+  margin-bottom: 1.5rem;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+article {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,255,170,0.15);
+}
+article h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+article a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00ffaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+article a:hover {
+  color: #ffaaee;
+}
+.lead {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: auto;
+}
+#proyectos article {
+  background: #222;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 250px;
+  box-shadow: 0 0 10px #00ffffaa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+#proyectos article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00cc;
+}
+#contacto a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+#contacto a:hover {
+  color: #ff00cc;
+}
